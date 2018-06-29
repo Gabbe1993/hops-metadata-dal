@@ -20,21 +20,21 @@ public class INodeBase {
   protected int id;
   protected int parentId;
   protected String name;
-  protected int partitionId;
-  protected int userID;
-  protected int groupID;
-  protected String userName;
-  protected String groupName;
-  protected short permission;
+  protected int partitionId; // TODO: can put parentId
+  protected int userID; // ugi value
+  protected int groupID; // ugi
+  protected String userName; // ugi
+  protected String groupName; // ugi
+  protected short permission; // ugi
   protected long header;
   protected boolean dirWithQuota;
-  protected boolean underConstruction;
-  protected boolean subtreeLocked;
-  protected long subtreeLockOwner;
+  protected boolean underConstruction; // false
+  protected boolean subtreeLocked; // false
+  protected long subtreeLockOwner; // -1
   protected long fileSize;
   protected boolean isDir;
   protected int logicalTime;
-  protected byte storagePolicy;
+  protected byte storagePolicy; // HdfsConstants.PROVIDED_STORAGE_POLICY_ID
 
   public INodeBase(){}
 
