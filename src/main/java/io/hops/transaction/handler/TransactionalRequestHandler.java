@@ -62,6 +62,7 @@ public abstract class TransactionalRequestHandler extends RequestHandler {
       
       EntityManager.preventStorageCall(false);
       try {
+        connector.readCommitted();
         setNDC(info);
         if(LOG.isDebugEnabled()) {
           LOG.debug("Pretransaction phase started");
